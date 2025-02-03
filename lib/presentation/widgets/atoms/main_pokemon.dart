@@ -1,41 +1,38 @@
 import 'package:flutter/material.dart';
 
-class MainPokemon extends StatelessWidget{
+class MainPokemon extends StatelessWidget {
   const MainPokemon({
-      super.key,
-      required this.imgurl,
-      required this.color,
-    });
+    required this.imgurl,
+    required this.color,
+    super.key,
+  });
+
   final Color color;
   final String imgurl;
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Stack(
-              children: [
-                Image.asset(
-                  'assets/poke_ball_icon.png',
-                  width: 320,
-                  height: 320,
-                  color: color,
-                  opacity: AlwaysStoppedAnimation(0.2),
-                  ),
-                Positioned(
-                  bottom: -1,
-                  right: -1,
-                  child: Image.asset(
-                    'assets/bulbasur.png',
-                    width: 330,
-                    height: 330,
-                    ),
-                ),
-              ],
-            )
+    return SizedBox(
+      width: 300,
+      height: 300,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Image.asset(
+            'assets/poke_ball_icon.png',
+            width: 300,
+            height: 300,
+            color: color,
+            opacity: const AlwaysStoppedAnimation(0.2),
           ),
-      ],
+          Image.asset(
+            imgurl,
+            width: 250,
+            height: 250,
+            fit: BoxFit.contain,
+          ),
+        ],
+      ),
     );
   }
 }

@@ -7,9 +7,14 @@ class InfoPokemon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      padding:
+          const EdgeInsets.only(top: 40), // Para darle un padding a la caja
+      decoration: const BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
       ),
       child: const DefaultTabController(
         length: 4,
@@ -20,27 +25,19 @@ class InfoPokemon extends StatelessWidget {
               unselectedLabelColor: Color.fromARGB(255, 0, 0, 0),
               indicatorColor: Color.fromARGB(255, 62, 255, 159),
               tabs: [
-                Tab(
-                  text: 'About',
-                ),
-                Tab(
-                  text: 'Base Stats',
-                ),
-                Tab(
-                  text: 'Evolution',
-                ),
-                Tab(
-                  text: 'Moves',
-                ),
+                Tab(text: 'About'),
+                Tab(text: 'Base Stats'),
+                Tab(text: 'Evolution'),
+                Tab(text: 'Moves'),
               ],
             ),
-            SizedBox(
-              height: 246,
+            Expanded(
               child: TabBarView(
+                physics: BouncingScrollPhysics(),
                 children: [
                   Center(child: Text('Página de Inicio')),
                   Center(child: Text('Página de Búsqueda')),
-                  EvolutionPage(),
+                  SingleChildScrollView(child: EvolutionPage()),
                   Center(child: Text('Página de Perfil')),
                 ],
               ),

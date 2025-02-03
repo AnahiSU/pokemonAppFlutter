@@ -24,13 +24,13 @@ ThemeData themeLight() {
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       showSelectedLabels: false,
       showUnselectedLabels: false,
-      elevation: 10.0,
+      elevation: 10,
     ),
     canvasColor: Colors.white,
     appBarTheme: const AppBarTheme(
       titleTextStyle: TextStyle(
         fontWeight: FontWeight.w600,
-        fontSize: 20.0,
+        fontSize: 20,
         fontFamily: textTheme,
       ),
       color: Colors.white,
@@ -45,25 +45,10 @@ ThemeData themeLight() {
       surfaceTintColor: Colors.white,
     ),
     useMaterial3: true,
-    tabBarTheme: const TabBarTheme(
-      labelColor: Colors.white,
-      labelStyle: TextStyle(
-        fontWeight: FontWeight.w600,
-        fontFamily: textTheme,
-      ),
-      unselectedLabelColor: textSecondary,
-      unselectedLabelStyle: TextStyle(
-        fontWeight: FontWeight.normal,
-        fontFamily: textTheme,
-      ),
-      indicatorSize: TabBarIndicatorSize.tab,
-      tabAlignment: TabAlignment.start,
-      dividerHeight: 0.0,
-    ),
     snackBarTheme: const SnackBarThemeData(
       contentTextStyle: TextStyle(
         fontWeight: FontWeight.w600,
-        fontSize: 16.0,
+        fontSize: 16,
         fontFamily: textTheme,
       ),
     ),
@@ -108,25 +93,10 @@ ThemeData themeDark() {
       surfaceTintColor: Colors.white,
     ),
     useMaterial3: true,
-    tabBarTheme: const TabBarTheme(
-      labelColor: Colors.white,
-      labelStyle: TextStyle(
-        fontWeight: FontWeight.w600,
-        fontFamily: textTheme,
-      ),
-      unselectedLabelColor: textSecondary,
-      unselectedLabelStyle: TextStyle(
-        fontWeight: FontWeight.normal,
-        fontFamily: textTheme,
-      ),
-      indicatorSize: TabBarIndicatorSize.tab,
-      tabAlignment: TabAlignment.start,
-      dividerHeight: 0.0,
-    ),
     snackBarTheme: const SnackBarThemeData(
       contentTextStyle: TextStyle(
         fontWeight: FontWeight.w600,
-        fontSize: 16.0,
+        fontSize: 16,
         fontFamily: textTheme,
       ),
     ),

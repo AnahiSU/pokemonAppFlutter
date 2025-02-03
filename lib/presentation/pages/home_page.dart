@@ -1,7 +1,7 @@
+import 'package:feed_card_project/presentation/providers/toggle_theme.dart';
 import 'package:feed_card_project/presentation/widgets/organisms/pokemon_news.dart';
-import 'package:feed_card_project/providers/toggle_theme.dart';
-import 'package:flutter/material.dart';
 import 'package:feed_card_project/presentation/widgets/organisms/pokemon_search.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: SafeArea(
+      body: const SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
